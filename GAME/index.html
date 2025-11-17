@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Jogo de Plataforma 2D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="ui">
+            <div class="lives">Vidas: <span id="lives">3</span></div>
+        </div>
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        
+        <!-- Controles Mobile -->
+        <div class="mobile-controls">
+            <div class="movement-controls">
+                <button class="control-btn btn-left" id="btnLeft" ontouchstart="handleTouchStart(event, 'a')" ontouchend="handleTouchEnd(event, 'a')" onmousedown="handleMouseDown(event, 'a')" onmouseup="handleMouseUp(event, 'a')">
+                    ←
+                </button>
+                <button class="control-btn btn-jump" id="btnJump" ontouchstart="handleTouchStart(event, 'w')" ontouchend="handleTouchEnd(event, 'w')" onmousedown="handleMouseDown(event, 'w')" onmouseup="handleMouseUp(event, 'w')">
+                    ↑
+                </button>
+                <button class="control-btn btn-right" id="btnRight" ontouchstart="handleTouchStart(event, 'd')" ontouchend="handleTouchEnd(event, 'd')" onmousedown="handleMouseDown(event, 'd')" onmouseup="handleMouseUp(event, 'd')">
+                    →
+                </button>
+            </div>
+            <div class="action-controls">
+                <button class="control-btn btn-shoot" id="btnShoot" ontouchstart="handleTouchStart(event, 'p')" ontouchend="handleTouchEnd(event, 'p')" onmousedown="handleMouseDown(event, 'p')" onmouseup="handleMouseUp(event, 'p')">
+                    🔫
+                </button>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <p><strong>Controles:</strong></p>
+            <p class="desktop-only">WASD - Movimentar (W = Pular) | P - Atirar</p>
+            <p class="mobile-only">Use os botões na tela para jogar</p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
+
